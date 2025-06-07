@@ -284,7 +284,7 @@ console.log(`
 🎨 Welcome to my portfolio!
 🚀 Built with modern web technologies
 💼 Available for freelance opportunities
-📧 Contact: nandanthakur.in@outlook.com
+📧 Contact: nandanthakur.in@gmail.com
 `);
 
 // Performance optimization
