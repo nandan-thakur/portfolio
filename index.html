@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandan Thakur - Software Engineer & AI Platform Developer</title>
+
+    <!-- Performance Optimization: Preload critical resources -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    <link rel="preload" href="styles.css" as="style">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Nandan Thakur - Software Engineer specializing in AI platforms, microservices, and full-stack development. 6+ years experience at Thomson Reuters & Mphasis.">
+    <meta name="keywords"
+        content="Software Engineer, AI Developer, Full Stack Developer, Java, React, Python, Spring Boot, Thomson Reuters">
+    <meta name="author" content="Nandan Thakur">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Nandan Thakur - Software Engineer & AI Platform Developer">
+    <meta property="og:description"
+        content="Experienced Software Engineer with 6+ years in AI platforms, microservices, and scalable solutions.">
+    <meta property="og:type" content="website">
+
+    <!-- Critical CSS inlined for faster loading -->
+    <style>
+        /* Critical above-the-fold CSS */
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #000428 100%);
+
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --accent-color: #4facfe;
+            --text-primary: #2c3e50;
+            --text-secondary: #6c757d;
+            --text-light: #ffffff;
+            --bg-light: #ffffff;
+            --bg-dark: #1a1a1a;
+            --bg-section: #f8f9fa;
+            --border-color: #e9ecef;
+
+            --border-radius: 20px;
+            --border-radius-small: 10px;
+            --box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            --box-shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.15);
+
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        /* Dark Theme Variables */
+        [data-theme="dark"] {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --bg-light: #1a1a1a;
+            --bg-section: #2a2a2a;
+            --border-color: #404040;
+            --box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-light);
+            overflow-x: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        /* Loading Screen */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.3s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+
+    <!-- Dark mode script - runs immediately to prevent flash -->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <!-- External CSS loaded asynchronously -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+    <!-- Optimized Loading Screen -->
+    <div id="loader" class="loader">
+        <div style="text-align: center; color: white;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem; font-weight: 700;">Nandan Thakur</h2>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav class="floating-nav" id="floatingNav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-initial">N</span>
+                <span class="brand-text">Nandan</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home" title="Home"><i
+                            class="fas fa-home"></i></a></li>
+                <li><a href="#about" class="nav-link" data-section="about" title="About"><i class="fas fa-user"></i></a>
+                </li>
+                <li><a href="#experience" class="nav-link" data-section="experience" title="Experience"><i
+                            class="fas fa-briefcase"></i></a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills" title="Skills"><i
+                            class="fas fa-code"></i></a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects" title="Projects"><i
+                            class="fas fa-rocket"></i></a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact" title="Contact"><i
+                            class="fas fa-envelope"></i></a></li>
+            </ul>
+            <div class="theme-toggle">
+                <button id="themeToggle" class="theme-btn" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-text">
+                    <h4 class="hero-greeting">Hello, I'm</h4>
+                    <h1 class="hero-name">
+                        <span class="text-gradient">Nandan Thakur</span>
+                    </h1>
+                    <div class="hero-roles">
+                        <span class="role-text">I'm a </span>
+                        <span class="dynamic-text">
+                            <span class="role active">Software Engineer</span>
+                            <span class="role">AI Platform Developer</span>
+                            <span class="role">Full Stack Developer</span>
+                            <span class="role">Cloud Architect</span>
+                        </span>
+                    </div>
+                    <p class="hero-description">
+                        Passionate software engineer with 6+ years of experience building scalable AI-driven
+                        platforms and microservices. Currently crafting innovative solutions at Thomson Reuters,
+                        processing 5,000+ EU legal documents daily with cutting-edge technology.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-primary">
+                            <span>Let's Connect</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="btn-secondary">
+                            <span>View Projects</span>
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="https://linkedin.com/in/nandan-thakur" class="social-link" target="_blank"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/nandan-thakur" class="social-link" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:nandanthakur.in@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+91000000000" class="social-link" title="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-card">
+                        <div class="card-glow"></div>
+                        <div class="profile-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="status-indicator">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Available for opportunities</span>
+                            </div>
+                        </div>
+                        <div class="quick-stats">
+                            <div class="stat">
+                                <span class="stat-number">6+</span>
+                                <span class="stat-label">Years Exp</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">AI Bots</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Who am I</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know the person behind the code</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="about-card">
+                        <h3>Crafting Digital Experiences</h3>
+                        <p>
+                            I'm a passionate software engineer with 6+ years of experience specializing
+                            in AI-driven platforms and microservices architecture. Currently working at
+                            Thomson Reuters, I've launched scalable ingestion pipelines that process
+                            over 5,000 EU legal documents daily with 40% latency reduction.
+                        </p>
+                        <p>
+                            My journey spans from building 50+ AI chatbots at Mphasis to architecting
+                            cutting-edge solutions that boost user engagement by 25%. I thrive on
+                            solving complex problems and creating solutions that make a real impact
+                            on business operations and user experiences.
+                        </p>
+
+                        <!-- Update the About Section Achievement Items -->
+                        <div class="highlight-achievements">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <div class="achievement-text">
+                                    <h4>2nd Runner-Up</h4>
+                                    <p>Google Cloud "Cloud Fest Hackathon" 2022</p>
+                                    <a href="https://www.hackerearth.com/challenges/hackathon/cloud-fest-hackathon-i-presented-by-google-cloud/"
+                                        target="_blank" class="achievement-link">
+                                        <i class="fas fa-external-link-alt"></i> View Challenge
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="achievement-text">
+                                    <h4>3rd Place</h4>
+                                    <p>Mphasis "Curious Bot Challenge" 2021</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="metrics-grid">
+                        <div class="metric-card" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="metric-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="metric-number" data-count="6">0</div>
+                            <div class="metric-label">Years Experience</div>
+                            <div class="metric-bar">
+                                <div class="metric-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric-card" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="metric-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="metric-number" data-count="50">0</div>
+                            <div class="metric-label">AI Chatbots Built</div>
+                            <div class="metric-bar">
+                                <div class="metric-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric-card" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="metric-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="metric-number" data-count="6">0</div>
+                            <div class="metric-label">Projects</div>
+                            <div class="metric-bar">
+                                <div class="metric-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric-card" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="metric-icon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <div class="metric-number" data-count="40">0</div>
+                            <div class="metric-label">% Latency Reduction</div>
+                            <div class="metric-bar">
+                                <div class="metric-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">My Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">Building solutions that matter, one project at a time</p>
+            </div>
+
+            <div class="experience-timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="company-logo">TR</div>
+                                <div class="job-info">
+                                    <h3>Software Engineer</h3>
+                                    <h4>Thomson Reuters</h4>
+                                    <div class="job-details">
+                                        <span class="department">Core AI & Data Platforms</span>
+                                        <span class="location">Bengaluru, India</span>
+                                        <span class="duration">July 2022 – Present</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="achievements-list">
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <p>Launched scalable ingestion pipeline processing 5,000+ EU legal documents daily,
+                                        reducing latency by 40%</p>
+                                </div>
+
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-cubes"></i>
+                                    </div>
+                                    <p>Architected microservices-based backend using Spring Boot for independent service
+                                        scaling</p>
+                                </div>
+
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <p>Delivered React-powered interface boosting user engagement by 25%</p>
+                                </div>
+
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-cogs"></i>
+                                    </div>
+                                    <p>Built automated CI/CD workflows with Jenkins and GitHub Actions</p>
+                                </div>
+
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <p>Created POC for automated test case development using CLINE and Claude Sonnet</p>
+                                </div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">RabbitMQ</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div class="card-header">
+                                <div class="company-logo">MP</div>
+                                <div class="job-info">
+                                    <h3>Software Engineer</h3>
+                                    <h4>Mphasis Limited</h4>
+                                    <div class="job-details">
+                                        <span class="department">R&D Lab</span>
+                                        <span class="location">Bengaluru, India</span>
+                                        <span class="duration">January 2019 – July 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="achievements-list">
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <p>Developed 50+ AI-driven chatbots across healthcare, insurance, and HR domains</p>
+                                </div>
+
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <p>Engineered Python-based indexing algorithm reducing query latency by 60%</p>
+                                </div>
+
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-hospital"></i>
+                                    </div>
+                                    <p>Led end-to-end build of Medicaid telehealth portal with ReactJs and Azure FHIR
+                                        API</p>
+                                </div>
+
+                                <div class="achievement">
+                                    <div class="achievement-icon">
+                                        <i class="fas fa-tools"></i>
+                                    </div>
+                                    <p>Designed field-support dispatch tool improving resolution rates by 20%</p>
+                                </div>
+                            </div>
+
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Azure Bot Framework</span>
+                                <span class="tech-tag">Microsoft LUIS</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Java</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">What I know</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Languages & Frameworks</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Spring Boot</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Cloud & DevOps</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">AWS</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Azure</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Jenkins</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">CI/CD</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databases & Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">PostgreSQL</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">RabbitMQ</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Redis</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>AI & Architecture</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">GenAI</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Microservices</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">REST API</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">System Design</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Data Structures</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Algorithm</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">What I've built</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Innovative solutions that drive real impact across industries</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- SOLT & Commentary Project -->
+                <div class="project-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <div class="image-overlay">
+                            <div class="project-icon">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://legal.thomsonreuters.com/en/westlaw" target="_blank"
+                                    class="project-link" title="View Westlaw">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>SOLT & Commentary</h3>
+                            <span class="project-company">Thomson Reuters</span>
+                            <span class="project-status current">Current Project</span>
+                        </div>
+                        <p class="project-description">
+                            Scalable ingestion system for UK and EU legal content integration into Westlaw.
+                            Processes 5,000+ documents daily with 40% latency reduction through innovative
+                            microservices architecture and real-time document processing pipeline.
+                        </p>
+                        <div class="project-achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>40% latency reduction</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span>5,000+ docs/day processed</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-users"></i>
+                                <span>25% user engagement boost</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">RabbitMQ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cognitive Guru Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <div class="image-overlay">
+                            <div class="project-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.mphasis.com/home/services/cognitive/cognitive-guru-solution.html"
+                                    target="_blank" class="project-link" title="View Cognitive Guru">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Cognitive Guru</h3>
+                            <span class="project-company">Mphasis Limited</span>
+                        </div>
+                        <p class="project-description">
+                            AI-based chatbot platform enabling enterprises to design, build, and deploy
+                            chatbots effortlessly across healthcare, insurance, and HR domains. Integrated
+                            Microsoft LUIS NLP achieving 30% reduction in support tickets.
+                        </p>
+                        <div class="project-achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-robot"></i>
+                                <span>50+ chatbots developed</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-chart-down"></i>
+                                <span>30% support ticket reduction</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-industry"></i>
+                                <span>3 industry domains</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">Python</span>
+                            <span class="tech-tag">Azure Bot Framework</span>
+                            <span class="tech-tag">Microsoft LUIS</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cognitive Quality Engineering Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <div class="image-overlay">
+                            <div class="project-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.mphasis.com/home/industries/hi-tech/mphasis-cognitive-quality-engineering.html"
+                                    target="_blank" class="project-link" title="View Cognitive QE">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Cognitive Quality Engineering</h3>
+                            <span class="project-company">Mphasis Limited</span>
+                        </div>
+                        <p class="project-description">
+                            AI/ML platform for improving software quality and optimizing testing processes.
+                            Engineered Python-based indexing algorithm for 1M+ test case records, reducing
+                            query latency by 60% and enabling instant case retrieval for QA teams.
+                        </p>
+                        <div class="project-achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-database"></i>
+                                <span>1M+ test case records</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-lightning-bolt"></i>
+                                <span>60% query latency reduction</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-brain"></i>
+                                <span>AI-powered predictions</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medicaid Telehealth Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <div class="image-overlay">
+                            <div class="project-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Medicaid Telehealth Portal</h3>
+                            <span class="project-company">Mphasis Limited</span>
+                        </div>
+                        <p class="project-description">
+                            End-to-end telehealth portal for healthcare organizations to manage appointments
+                            between practitioners and patients. Integrated with Azure FHIR API and in-house
+                            OCR-driven PDF-to-FHIR pipeline, reducing patient intake from hours to minutes.
+                        </p>
+                        <div class="project-achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Hours to minutes intake time</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-file-medical"></i>
+                                <span>FHIR API integration</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-eye"></i>
+                                <span>OCR-driven automation</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">React</span>
+                            <span class="tech-tag">FHIR</span>
+                            <span class="tech-tag">HAPI</span>
+                            <span class="tech-tag">Azure Form Recognizer</span>
+                            <span class="tech-tag">OCR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dispatch Management Tool Project -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <div class="image-overlay">
+                            <div class="project-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Field Support Dispatch Tool</h3>
+                            <span class="project-company">Mphasis Limited</span>
+                        </div>
+                        <p class="project-description">
+                            Comprehensive tool for tracking field support engineers' activities and managing
+                            task assignments. Features real-time task assignment, visual dashboards, and
+                            graphical insights, improving resolution rates by 20%.
+                        </p>
+                        <div class="project-achievements">
+                            <div class="achievement-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>20% resolution rate improvement</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Real-time task assignment</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Visual dashboards</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag primary">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get in touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">Ready to bring your ideas to life? Let's connect!</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-card">
+                        <h3>Let's start a conversation</h3>
+                        <p>
+                            I'm always excited to discuss new opportunities, innovative projects,
+                            or just have a chat about technology and software engineering.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <a href="mailto:nandanthakur.in@outlook.com">nandanthakur.in@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Phone</h4>
+                                    <a href="tel:+91000000000">+91-000000000</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Location</h4>
+                                    <span>Bengaluru, Karnataka</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <h4>Follow me on</h4>
+                            <div class="social-grid">
+                                <a href="https://linkedin.com/in/nandan-thakur" class="social-link" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/nandan-thakur" class="social-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form" data-aos="fade-left">
+                    <form class="modern-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email Address</label>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Nandan Thakur</h3>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nandan Thakur. Crafted with ❤️ and ☕︎.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Performance: Load scripts optimally -->
+    <script>
+        // Critical JavaScript for immediate execution
+        const loader = document.getElementById('loader');
+
+        // Hide loader faster with error handling
+        function hideLoader() {
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                    setTimeout(() => {
+                        if (loader.parentNode) {
+                            loader.parentNode.removeChild(loader);
+                        }
+                    }, 300);
+                }, 500); // Reduced from 2500ms to 500ms
+            }
+        }
+
+        // Hide loader on both DOMContentLoaded and load events
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', hideLoader);
+        } else {
+            hideLoader();
+        }
+
+        window.addEventListener('load', hideLoader);
+
+        // Fallback: Force hide loader after 2 seconds
+        setTimeout(hideLoader, 2000);
+    </script>
+
+    <!-- Load non-critical scripts asynchronously -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async
+        onload="AOS.init({duration: 600, once: true, offset: 50});"></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
